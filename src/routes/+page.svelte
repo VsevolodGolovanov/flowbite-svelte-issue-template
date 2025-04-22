@@ -1,5 +1,5 @@
 <script>
-	import { Heading, List, Li } from 'flowbite-svelte';
+	import { Heading, Input, List, Li, Rating } from 'flowbite-svelte';
 </script>
 
 <div class="p-9">
@@ -10,6 +10,14 @@
 		<Li class="text-2xl">Run `pnpm update` to update dependencies.</Li>
 		<Li class="text-2xl">Add your code.</Li>
 		<Li class="text-2xl">Run `pnpm check`.</Li>
-    <Li class="text-2xl">It's a good practice to run `pnpm format && pnpm lint`</Li>
+		<Li class="text-2xl">It's a good practice to run `pnpm format && pnpm lint`</Li>
 	</List>
+
+	<Heading tag="h1">Here's the issue, mousehover this:</Heading>
+	<div>
+		<Rating total={5} rating={3} title="This doesn't show as expected" />
+	</div>
+	<div>
+		<Input placeholder="And here title works fine" title="See?" />
+	</div>
 </div>
